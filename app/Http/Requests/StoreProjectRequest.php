@@ -24,6 +24,7 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
+            'type_id' => 'nullable|exists:types,id',
             'title' => 'required|max:150|unique:projects',
             'description' => 'nullable|max:300',
             'cover_path' => 'nullable|image|max:255'
@@ -32,6 +33,7 @@ class StoreProjectRequest extends FormRequest
 
     public function messages(){
         return [
+            'title.exists' => 'La tipologia inserita non è valida',
             'title.required' => 'Il titolo è obbligatorio',
             'title.max' => 'Il titolo può avere massimo 150 caratteri',
             'title.unique' => 'Esiste già un progetto con questo titolo',
