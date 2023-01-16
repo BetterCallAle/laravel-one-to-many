@@ -57,6 +57,13 @@
                         </li>
 
                         <li class="nav-item mb-3">
+                            <a href="{{ route('admin.types.index') }}" class="nav-link text-light text-center {{ Route::currentRouteName() === 'admin.types.index' ? 'bg-secondary' : '' }}">
+                                <i class="fa-solid fa-folder"></i>
+                                Tutte le tipologie
+                            </a>
+                        </li>
+
+                        <li class="nav-item mb-3">
                             <a href="{{ route('admin.projects.create') }}" class="nav-link text-light text-center {{ Route::currentRouteName() === 'admin.projects.create' ? 'bg-secondary' : '' }}">
                                 <i class="fa-solid fa-plus"></i>
                                 Aggiungi un progetto

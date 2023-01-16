@@ -46,7 +46,7 @@ if(fileInput && imgPreview){
 function showTheModal(element){
     element.addEventListener('click', (event)=>{
         event.preventDefault();
-        let projectTitle = element.getAttribute('button-project-name');
+        let projectTitle = element.getAttribute('button-name');
         const modal = new bootstrap.Modal(document.getElementById('delete-modal'));
         document.getElementById('modal-title').innerText =  `Sei sicuro di voler eliminare ${projectTitle}?`;
         modal.show();
