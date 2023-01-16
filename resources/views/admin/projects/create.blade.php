@@ -22,6 +22,17 @@
             </div>
 
             <div class="mb-3">
+                <label for="types" class="form-label">Seleziona la tipologia del progetto</label>
+                <select name="type_id" id="types" class="form-control w-25">
+                    <option value="">Nessuna tipologia</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>
+
+            </div>
+
+            <div class="mb-3">
                 <label for="cover_path" class="form-label">Inserisci l'immagine della cover</label>
                 <input type="file" id="cover_path" name="cover_path" class="form-control @error('cover_path') is-invalid @enderror">
 
