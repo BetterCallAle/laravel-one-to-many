@@ -21,6 +21,7 @@
             <thead>
                 <tr>
                     <th scope="col">Titolo</th>
+                    <th scope='col'>Tipologia</th>
                     <th scope="col">Data di creazione</th>
                     <th scope="col">Immagini</th>
                     <th scope="col">Azioni</th>
@@ -30,6 +31,7 @@
                 @foreach ($projects as $project)
                     <tr>
                         <th scope="row">{{ $project->title }}</th>
+                        <td>{{ $project->type ? $project->type->name : 'Nessuna tipologia'}}</th>
                         <td>{{ $project->created_at }}</td>
                         <td>
                             @if ($project->cover_path)

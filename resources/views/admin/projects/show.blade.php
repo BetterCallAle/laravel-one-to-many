@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="container mt-5">
+        <h6 class="text-center text-primary">{{ $project->type ? $project->type->name : 'Nessuna tipologia' }}</h6>
         <h2 class="text-center mb-3">{{ $project->title }}</h2>
         <div class="d-flex justify-content-between">
             <small>Creato il {{ $project->created_at }}</small>
